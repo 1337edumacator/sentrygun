@@ -32,12 +32,12 @@ To run the SentryGun system, first start the SentryGun-Server instance by issuin
 
 SentryGun-Server accepts the following command line arguments.
 
-	- --port   - specifies the port on which sentrygun-server should listen (defaults to 80)
-	- --host   - specifies the address at which sentrygun-server should listen (defaults to 0.0.0.0 if --tunnels flag is not used. Defaults to 127.0.0.1 if --tunnels flag is used).
-	- --debug  - Run in debug mode (not recommended for production environments)
-	- --expire - Sets the number of seconds that alerts should remain active before they are automatically dismissed. To disable alert expiration, set this to 0 (default).
-	- --tunnels - Creates ssh tunnels from localhost:PORT on sentrygun-server to localhost:PORT on a list of sentrygun clients, where PORT is the port at which sentrygun-server listens on. When this flag is used, sentrygun-server will always listen on localhost regardless of whether the --host is used. Use this option when running sentrygun on a hostle network (you should assume that you are). SentryGun clients should be specified with the format user@host:port.
-
+ - --port   - specifies the port on which sentrygun-server should listen (defaults to 80)
+ - --host   - specifies the address at which sentrygun-server should listen (defaults to 0.0.0.0 if --tunnels flag is not used. Defaults to 127.0.0.1 if --tunnels flag is used).
+ - --debug  - Run in debug mode (not recommended for production environments)
+ - --expire - Sets the number of seconds that alerts should remain active before they are automatically dismissed. To disable alert expiration, set this to 0 (default).
+ - --tunnels - Creates ssh tunnels from localhost:PORT on sentrygun-server to localhost:PORT on a list of sentrygun clients, where PORT is the port at which sentrygun-server listens on. When this flag is used, sentrygun-server will always listen on localhost regardless of whether the --host is used. Use this option when running sentrygun on a hostle network (you should assume that you are). SentryGun clients should be specified with the format user@host:port.
+ 
 #Usage Instructions
 
 
