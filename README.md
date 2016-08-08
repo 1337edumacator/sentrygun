@@ -20,9 +20,37 @@ dual band wireless adapter
 
 ##Step 1 - sentrygun sensor initial setup
 
+A sentrygun sensor can be built using any device that meets the following requirements:
+
+ - can be provisioned with a modern 64 bit Linux operating system
+ - has an ethernet adapter
+ - can power an external wireless adapter such as the TP-Link ___ or Alfa ___.
+
+A good candidate for building a sentrygun sensor is the Raspberry Pi microcomputer.
+
 ##Step 2 - sentrygun-server CnC initial setup
 
+The machine running sentrygun's server component can be anything from a laptop to a rackmount machine. Any machine can be used so long as it meets the following requirements:
+
+ - is provisioned with a modern 64 bit Linux operating system
+ - is capable of running sentrygun's software dependencies
+ - is capable of connecting to an ethernet network
+
+To setup sentrygun-server on your machine of choice, first install the following software dependencies:
+
+	dnf install gcc redhat-rpm-config python-devel autossh redis
+
+Then install the python dependencies enumerated in the pip.req file included with the project:
+
+	pip install -r pip.req
+
 ##Step 3 - network setup
+
+SentryGun sensors should be arranged in a grid across the area that they are responsible for protecting. For example, to add rogue AP protection to a large conference room:
+
+	<diagram here>
+
+The sensors should be connected to the machine running sentrygun-server over a phsyical network connection. Preferably, this connection should occur over an ethernet connection only accessible to network administrators (i.e. management network).
 
 ##Step 4 - Calibrate SentryGun sensors
 
