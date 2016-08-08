@@ -1,20 +1,26 @@
 # sentrygun
 
+Sentrygun is an open source toolkit for detecting and responding to evil twin and karma attacks. It is capable of identifying evil twin attacks using whitelisting and listening for anomalies in signal strength. It is capable of detecting karma attacks by deliberately sending out probe requests for randomized ESSIDs then comparing the responses.
+
+A sentrygun installation consists of an array of sensors arranged in a grid that communicate with a command and control server. The sensor units analyze wireless traffic to detect nearby evil twin and karma attacks, and report results back to the server. When an evil twin or karma attack is detected, an alert is displayed in sentrygun's web frontend. Network administrators can then take steps to locate the attack, or use sentrygun to launch counterattacks against the offending rogue AP.
+
 #Key Features
 
  - Capable of detecting karma attacks based on probe request/response patterns
  - Capable of detecting evil twin attacks through the use of whitelist crossreferencing
- - Capable of detecting evil twin attacks based on fluctuations in signal strength
- - Can automatically respond to evil twin attacks by actively disabling attacker's rogue access points
- - Sends email alerts when attacks are detected
+ - Capable of detecting evil twin attacks by identifying anomalies in signal strength
+ - Assists network administrators in determining physical location of rogue AP attack
+ - Capable of launching counterattacks against rogue access points
 
-# Project Overview
+#Upcoming Features
 
-#Required Hardware - Sentrygun
+ - machine learning based approach to evil twin detection
+ - identification of behaviors typically used by rogue APs to evade detection
+ - identification of rogue APs through the use of WiFi canaries
 
-dual band wireless adapter
+#contributing to sentrygun
 
-#Required Hardware - Sentrygun-Server
+Want to contribute to sentrygun? Make a pull request, or contact research@gdssecurity.com. 
 
 #Full Setup
 
@@ -24,9 +30,12 @@ A sentrygun sensor can be built using any device that meets the following requir
 
  - can be provisioned with a modern 64 bit Linux operating system
  - has an ethernet adapter
- - can power an external wireless adapter such as the TP-Link ___ or Alfa ___.
+ - can power an external wireless adapter such as the TP-Link TL-WN722N.
 
 A good candidate for building a sentrygun sensor is the Raspberry Pi microcomputer.
+
+Additionally, each sentrygun sensor requires an external dual band wireless adapter capable
+of packet injection and monitor mode.
 
 To build a sentrygun sensor unit:
 
