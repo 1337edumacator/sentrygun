@@ -1,8 +1,12 @@
 # sentrygun
 
+This is the github repo for the sentrygun sensor component.
+
 Sentrygun is an open source toolkit for detecting and responding to evil twin and karma attacks. It is capable of identifying evil twin attacks using whitelisting and listening for anomalies in signal strength. It is capable of detecting karma attacks by deliberately sending out probe requests for randomized ESSIDs then comparing the responses.
 
 A sentrygun installation consists of an array of sensors arranged in a grid that communicate with a command and control server. The sensor units analyze wireless traffic to detect nearby evil twin and karma attacks, and report results back to the server. When an evil twin or karma attack is detected, an alert is displayed in sentrygun's web frontend. Network administrators can then take steps to locate the attack, or use sentrygun to launch counterattacks against the offending rogue AP.
+
+Want to contribute to sentrygun? Make a pull request, or contact research@gdssecurity.com. 
 
 #Key Features
 
@@ -17,10 +21,6 @@ A sentrygun installation consists of an array of sensors arranged in a grid that
  - machine learning based approach to evil twin detection
  - identification of behaviors typically used by rogue APs to evade detection
  - identification of rogue APs through the use of WiFi canaries
-
-#contributing to sentrygun
-
-Want to contribute to sentrygun? Make a pull request, or contact research@gdssecurity.com. 
 
 #Full Setup
 
