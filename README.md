@@ -47,7 +47,7 @@ It is imperative that sg-calibrator.py is run in a physically secure environment
 
 Once all devices have been calibrated, we can proceed to step 4 to initialize the system.
 
-##Step 4 - Run System
+##Step 5 - Run System
 
 To run the SentryGun system, first start the SentryGun-Server instance by issuing the following command on the CnC machine:
 
