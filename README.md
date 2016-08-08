@@ -18,7 +18,7 @@ dual band wireless adapter
 
 #Full Setup
 
-##Step 1 - sentrygun sensor initial setup
+##Step 1 - sentrygun sensor setup
 
 A sentrygun sensor can be built using any device that meets the following requirements:
 
@@ -28,7 +28,20 @@ A sentrygun sensor can be built using any device that meets the following requir
 
 A good candidate for building a sentrygun sensor is the Raspberry Pi microcomputer.
 
-##Step 2 - sentrygun-server CnC initial setup
+To build a sentrygun sensor unit:
+
+ 1. install linux operating system on device
+ 2. download sentrygun using the following command
+	
+	git clone https://github.com/s0lst1c3/sentrygun.git
+
+ 3. in the newly created sentrygun directory, install python dependencies using pip
+
+	pip install -r pip.req
+
+ 4. connect external wireless adapter to the device
+
+##Step 2 - sentrygun-server setup
 
 The machine running sentrygun's server component can be anything from a laptop to a rackmount machine. Any machine can be used so long as it meets the following requirements:
 
