@@ -18,15 +18,15 @@ dual band wireless adapter
 
 #Full Setup
 
-##Step 1 - Setup Infrastructure
+##Step 1 - sentrygun sensor initial setup
 
-##Step 2 - Establish Connections
+##Step 2 - sentrygun-server CnC initial setup
 
-Sensor devices equipped with SentryGun communicate with the central SentryGun-Server over HTTP and WebSockets. Commands issued by the web frontend are sent via HTTP POST request to the SentryGun-Server instance, whicb broadcasts the command to all sensor devices. 
+##Step 3 - network setup
 
-##Step 3 - Calibrate SentryGun sensors
+##Step 4 - Calibrate SentryGun sensors
 
-SentryGun sensor devices must be calibrated against your wireless network if evil twin detection is to be enabled. To calibrate the clients, first populate the whitelist.txt file on each of your sensor devices with the bssid and essid of each access point on your network. The access points should be listed in whitelist.txt using the following format.
+SentryGun sensor devices must be calibrated against your wireless network if evil twin detection is to be enabled. To calibrate the clients, populate the whitelist.txt file on each of your sensor devices with the bssid and essid of each access point on your network. The access points should be listed in whitelist.txt using the following format.
 
 	# essid bssid
 	gdslabs ff:ff:ff:aa:aa:aa
@@ -109,40 +109,3 @@ To perform one of these actions:
 
  1. click the action by name in the toolbar
  2. click submit
-
-##Step 1 - Install dependencies
-
-Dependencies are enumerated in pip.req. To install, use pip:
-
-	pip install -r pip.req
-
-##Step 2 - Add alert recipients
-
-SentryGun pushes alerts over HTTP to SentryGun-Server when a rogue access point attack is detected. To receive 
-
-Sentrygun sends email alerts when a rogue access point attack is detected. To receive SMS alerts instead, just add your cell phone's carrier address to the list of recipients.
-
-To recieve alerts from sentrygun, add your email address to the __alert\_recipients.txt__ file located in the project root directory. You can add an unlimited number of email addresses to __alert\_recipients.txt__. Each email address should be placed on a separate line.
-
-##Step 3 - Configure STMP
-
-You'll need a valid STMP server to send alerts with sentrygun. A gmail account works just fine for this purpose. STMP settings should be added to the __alert\_settings__ section of configs.py. Use the following settings to use gmail:
-
-	SMTP_SERVER = 'smtp.gmail.com'
-	SMTP_PORT = 587
-	SMTP_USER = 'your.username@gmail.com'
-	SMTP_PASS = 'your-gmail-password-goes-here'
-	DEFAULT_SUBJECT = 'Sentrygun Alert'
-
-#Usage Instructions
-
-Sentrygun has four flags:
-
- - --karma - Enables Karma attack detection
- - --evil-twin - Enables Evil Twin detection
- - --enable-alerts - Send alerts when attacks are detected
- - --enable-deauth - Send a positive message to rogue APs by flooding them with deauth packets
-
-To run sentrygun, just choose any combition of the options shown above and run using python. For example:
-
-	python sentrygun.py --evil-twin --karma --enable-alerts --enable-deauth
